@@ -4,9 +4,9 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇦 SA 01 - xiaohe
+- name: 🇨🇿 CZ 01 - xiaohe
   type: vless
-  server: 91.209.253.244
+  server: 195.85.23.219
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -18,23 +18,9 @@ proxies:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: nb.lovecf.ggff.net
-- name: 🇸🇦 SA 02 - xiaohe
+- name: 🇨🇿 CZ 02 - xiaohe
   type: vless
-  server: 91.209.253.250
-  port: 443
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: nb.lovecf.ggff.net
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: nb.lovecf.ggff.net
-- name: 🇸🇦 SA 03 - xiaohe
-  type: vless
-  server: 91.209.253.42
+  server: 195.85.23.45
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -46,23 +32,23 @@ proxies:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: nb.lovecf.ggff.net
-- name: 🇸🇦 SA 04 - xiaohe
+- name: 🇨🇿 CZ 03 - xiaohe
   type: vless
-  server: 91.209.253.68
+  server: 89.110.66.154
   port: 443
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: nb.lovecf.ggff.net
+  servername: cdn8848.776676.xyz
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: nb.lovecf.ggff.net
-- name: 🇸🇦 SA 05 - xiaohe
+      Host: cdn8848.776676.xyz
+- name: 🇨🇿 CZ 04 - xiaohe
   type: vless
-  server: 91.209.253.42
+  server: 195.85.23.88
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -79,20 +65,18 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇸🇦 SA 01 - xiaohe
-  - 🇸🇦 SA 02 - xiaohe
-  - 🇸🇦 SA 03 - xiaohe
-  - 🇸🇦 SA 04 - xiaohe
-  - 🇸🇦 SA 05 - xiaohe
+  - 🇨🇿 CZ 01 - xiaohe
+  - 🇨🇿 CZ 02 - xiaohe
+  - 🇨🇿 CZ 03 - xiaohe
+  - 🇨🇿 CZ 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇦 SA 01 - xiaohe
-  - 🇸🇦 SA 02 - xiaohe
-  - 🇸🇦 SA 03 - xiaohe
-  - 🇸🇦 SA 04 - xiaohe
-  - 🇸🇦 SA 05 - xiaohe
+  - 🇨🇿 CZ 01 - xiaohe
+  - 🇨🇿 CZ 02 - xiaohe
+  - 🇨🇿 CZ 03 - xiaohe
+  - 🇨🇿 CZ 04 - xiaohe
 rules:
 - MATCH,PROXIES
