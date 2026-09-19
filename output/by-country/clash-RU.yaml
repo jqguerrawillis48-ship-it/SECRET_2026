@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   type: vless
-  server: 188.114.97.6
+  server: 108.162.198.178
   port: 2095
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
@@ -14,13 +14,26 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /
     headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: vless
-  server: 172.64.229.170
-  port: 2086
+  server: 104.18.34.14
+  port: 8880
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tlssecurity=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+  type: vless
+  server: 162.159.48.32
+  port: 2082
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
@@ -30,25 +43,54 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
   type: vless
-  server: 172.64.154.8
-  port: 2095
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  server: 188.114.97.6
+  port: 443
+  uuid: 142d1453-9cfe-4045-8e54-f3fb33342185
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: lively-scene-744f.107-47a.workers.dev
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls+
+    path: /pyip=ProxyIP.US.CMLiussss.net
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+      Host: lively-scene-744f.107-47a.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
+  type: vless
+  server: 172.67.203.158
+  port: 443
+  uuid: 911b84e1-d046-4fbf-bfc0-c168791115ef
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 12ygbae0k3gn0z0f.mehrshadhaddadi8.workers.dev
+  network: ws
+  ws-opts:
+    path: /vl/YCNmDFbqMu7cgTzgsfEWGtBD8kR
+    headers:
+      Host: 12ygbae0k3gn0z0f.mehrshadhaddadi8.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
+  type: vless
+  server: 172.64.80.1
+  port: 443
+  uuid: a5b1d1ec-327c-f1c5-5856-b34600000000
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ez-541f9d.ezaccess1d3db24.workers.dev
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: ez-541f9d.ezaccess1d3db24.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
   type: ss
-  server: 195.58.48.137
+  server: 195.133.5.102
   port: 10900
   cipher: aes-256-gcm
-  password: 8ad9d72a5571df86
+  password: 895b4b796a357570
   udp: true
 proxy-groups:
 - name: PROXIES
@@ -59,6 +101,9 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -68,5 +113,8 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
 rules:
 - MATCH,PROXIES
