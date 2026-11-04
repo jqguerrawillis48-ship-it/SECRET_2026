@@ -1,0 +1,34 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇧🇷 BR 01 - xiaohe
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  uuid: c2f1f999-365f-42a7-87e7-726cbd0753ae
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: auth-api-8be4aa-gw.prod-relay-110934.workers.dev
+  network: ws
+  ws-opts:
+    path: /294dd38929bdec5b?ed=2560
+    headers:
+      Host: auth-api-8be4aa-gw.prod-relay-110934.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇧🇷 BR 01 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇧🇷 BR 01 - xiaohe
+rules:
+- MATCH,PROXIES
